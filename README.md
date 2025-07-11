@@ -1,1 +1,1 @@
-TO DO: Add Assets/Library files to FPS Project
+TO DO: Add Library files to FPS Project if need be
