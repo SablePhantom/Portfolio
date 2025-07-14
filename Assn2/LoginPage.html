@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="SubmitButton.js"></script>
+<head>
+    <title>AZoom Car Rental</title>
+    <style>
+        body{
+                background-color: powderblue;
+            }
+        h1  {
+                color: blue;
+            }
+        .flex-container {
+                display: flex;
+                justify-content: center;
+                background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        }
+    h2 {text-align: center;}
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: black;
+    }
+
+    .active {
+        background-color: blue;
+    }
+    form {border: 3px solid #f1f1f1;}
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+    </style>
+</head>
+<body>
+    <h1>AZoom Car Rental</h1>
+
+    <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="Inspect.html">Inspect</a></li>
+        <li style="float:right"><a class="active" href="LoginPage.html">Login</a></li>
+    </ul>
+
+    <h2>Login Form</h2>
+
+    <form action="LoggedIn.html" method="post">
+    <div class="imgcontainer">
+        <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+            
+        <button type="submit" onclick="loginConfirmed()">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button onclick="cancelLogin()" type="button" class="cancelbtn">Cancel</button>
+        <p id="demo"></p>
+
+    <script>
+    function cancelLogin() {
+      window.location.href="file:///C:/Users/Randall%20Lim/OneDrive/Documents/ComSci/FWP/Assn2/HomePage.html";
+    }
+    </script>
+    </div>
+    </form>
+    <footer>
+        <p>&copy; 2023 AZoom. All rights reserved</p>
+    </footer>
+</body>
+</html>

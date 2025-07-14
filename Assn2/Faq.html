@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZoom Car Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+                background-color: powderblue;
+            }
+        h1  {
+                color: blue;
+            }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active,.accordion:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    h2 {text-align: center;}
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: black;
+    }
+
+    .active {
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <h1>AZoom Car Rental</h1>
+
+    <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a class="active" href="Faq.html">FAQ</a></li>
+        <li><a href="Inspect.html">Inspect</a></li>
+        <li style="float:right"><a class="active" href="LoginPage.html">Login</a></li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <button class="accordion">1. What payment method do you provide?</button>
+    <div class="panel">All of our transactions are done via credit card.</div><br>
+    <button class="accordion">2. Where am I able to return the car?</button>
+    <div class="panel">At the designated parking lot at one of our two branches.</div><br>
+    <button class="accordion">3. How do I know when to return the car?</button>
+    <div class="panel">You have the option to select rental duration when you select your car. Check back often to remember it!</div>
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+
+  <footer>
+    <p>&copy; 2023 AZoom. All rights reserved</p>
+  </footer>
+</body>
+</html>

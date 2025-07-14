@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZoom Car Rental</title>
+    <style>
+        body{
+                background-color: powderblue;
+            }
+        h1  {
+                color: blue;
+            }
+        .flex-container {
+                display: flex;
+                justify-content: center;
+                background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        }
+    h2 {text-align: center;}
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: black;
+    }
+
+    .active {
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <h1>AZoom Car Rental</h1>
+
+    <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a class="active" href="Inspect.html">Inspect</a></li>
+        <li style="float:right"><a class="active" href="LoginPage.html">Login</a></li>
+    </ul>
+
+    <h2 style="color: dodgerblue;">Click on one of the cars below to inspect!</h2>
+    <div class="flex-container">
+        <div><a href="DamageCheck.html"><img src="car1.webp" alt="car1" width="250" height="150"></a></div>
+        <div><a href="DamageCheck.html"><img src="car2.webp" alt="car2" width="250" height="150"></a></div>
+        <div><a href="DamageCheck.html"><img src="car3.webp" alt="car3" width="250" height="150"></a></div>
+        <div><a href="DamageCheck.html"><img src="car4.png" alt="car4" width="250" height="150"></a></div>
+        <div><a href="DamageCheck.html"><img src="car5.png" alt="car5" width="250" height="150"></a></div>  
+    </div>
+  <footer>
+    <p>&copy; 2023 AZoom. All rights reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rental Details</title>
+    <style>
+        body{
+                background-color: powderblue;
+            }
+        h1  {
+                color: blue;
+            }
+        .flex-container {
+                display: flex;
+                justify-content: center;
+                background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        }
+
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: black;
+    }
+
+    .active {
+        background-color: blue;
+    }
+    </style>
+    <!--<script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "" || x == null) {
+            alert("Name must be filled out");
+            return false;
+            }
+        }
+    </script>
+    <script>
+        function submitConfirmed() {
+          let text = "Are you sure you wish to submit this?";
+          if (confirm(text) == true) {
+            text = "Wonderful! Please be sure to retrieve the car from your chosen branch.";
+            <button onclick="document.location='Assn2.html'">Back to homepage</button>
+          } else {
+            text = "Not yet? There's always plenty of time to finalize...";
+          }
+          document.getElementById("demo").innerHTML = text;
+        }
+    </script>-->
+</head>
+<body>
+    <h1>AZoom Car Rental</h1>
+    <script src="SubmitButton.js"></script>
+    <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="Inspect.html">Inspect</a></li>
+        <li style="float:right"><a class="active" href="LoginPage.html">Login</a></li>
+    </ul>
+
+    <h2 style="color: green;">An excellent choice!</h2>
+
+    <form action="Rented.html">
+        <p>Please select one of our branches to get the car from:</p>
+        <input type="radio" id="branch1" name="branch" value="branch1" required>
+        <label for="branch1">Branch 1 (420 Crocodill Way)</label><br>
+        <input type="radio" id="branch2" name="branch" value="branch2" required>
+        <label for="branch2">Branch 2 (513 Amon Gus Drive)</label><br>
+
+    <form action="Rented.html">
+        <p>Please select your rental duration:</p>
+        <input type="radio" id="daily" name="duration" value="daily" required>
+        <label for="daily">Daily</label><br>
+        <input type="radio" id="weekly" name="duration" value="weekly" required>
+        <label for="weekly">Weekly</label><br>
+        <input type="radio" id="monthly" name="duration" value="monthly" required>
+        <label for="monthly">Monthly</label><br>
+
+    <form action="Rented.html">
+        <p>Please input your details:</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+    <form action="Rented.html">
+        <p>Please input your payment method:</p>
+        <label>Accepted Cards:</label>
+        <img src="Visa.jpg" alt="visa" width="40" height="20">
+        <img src="MasterCard.jpg" alt="mastercard" width="40" height="20">
+        <img src="AmExpr.jpg" alt="americanExpr" width="40" height="20">
+        <br>
+        <label>Card type:</label>
+        <select name="card_type" id="card_type" required="">
+            <option value="">---choose one--</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Master Card</option>
+            <option value="americanExpr">American Express</option>
+        </select><br>
+        <label>Card Number:</label>
+        <input type="number" name="card Number" id="Card Number" required><br>
+        <label>Expiration Date:</label>
+        <input type="date" name="exp_date" id="exp_date" required=""><br>
+        <label>CVV:</label>
+        <input type="password" name="CVV" id="CVV" required=""><br>
+        <br><br>
+        <button type="submit" value="Submit" onclick="submitConfirmed()">Submit</button>
+    </form><br>
+    
+    <footer>
+        <p>&copy; 2023 AZoom. All rights reserved</p>
+    </footer>
+</body>
+</html>
